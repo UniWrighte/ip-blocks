@@ -3,9 +3,9 @@ const {findLastIndexLT, numOfAddresses, getAmountsByPosition} = require("./helpe
 const {getIP} = require('./helpers/ip');
 
 
-console.log(numOfAddresses([256, 32]));
-console.log(numOfAddresses([256,256]));
-console.log(numOfAddresses([256, 256, 32]));
+// console.log(numOfAddresses([256, 32]));
+// console.log(numOfAddresses([256,256]));
+// console.log(numOfAddresses([256, 256, 32]));
 
 function address(base, subnet, index){
 	//subnet is  /32 syntax
@@ -16,7 +16,6 @@ function address(base, subnet, index){
 	const blockCount = 32 - subnet;
 	let numBlocks = blockCount/8;
 	const blocks = [];
-	console.log({numBlocks});
 	
 	while(numBlocks > 1){
 		blocks.push(256);
@@ -34,7 +33,6 @@ function address(base, subnet, index){
 		toAdd.unshift(0);
 	}
 
-	console.log({blocks, i, toAdd});
 
 	//it needs to pass all in a block and reset to 0, iterating the next block + 1;
 	const baseArray = convertBaseToNumbers(base);
@@ -45,24 +43,27 @@ function address(base, subnet, index){
 
 }
 
-
-console.log("address:::", address("192.168.0.1", 23, 0));
-console.log("address1:::", address("192.168.0.1", 20, 300));
-
-console.log(byteToNumber([1,1,1,1,1,1,1,1]))
-
-console.log(numberToByte(256));
-console.log(convertBaseToBinary("192.168.0.1"));
+module.exports = address;
 
 
 
+// console.log("address:::", address("192.168.0.1", 23, 0));
+// console.log("address1:::", address("192.168.0.1", 20, 300));
 
-console.log(getAmountsByPosition());
+// console.log(byteToNumber([1,1,1,1,1,1,1,1]))
+
+// console.log(numberToByte(256));
+// console.log(convertBaseToBinary("192.168.0.1"));
 
 
-const result = getIP();
-const result2 = getIP(1);
-const result3 = getIP(400);
-const result4 = getIP(0);
-console.log({result2, result3, result4});
-console.log({result});
+
+
+// console.log(getAmountsByPosition());
+
+
+// const result = getIP();
+// const result2 = getIP(1);
+// const result3 = getIP(400);
+// const result4 = getIP(0);
+// console.log({result2, result3, result4});
+// console.log({result});

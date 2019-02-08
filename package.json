@@ -1,10 +1,11 @@
 {
   "name": "ip-blocks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create an IP address by index and subnet",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "tests": "jest --watch"
   },
   "keywords": [
     "ip",
