@@ -1,4 +1,4 @@
-exports.numOfAddresses = function(blocks, index){
+exports.numOfAddresses = function(blocks){
 	const numOfPossibilities = blocks.reverse().reduce((acc, val)=>{
 		return acc * val;
 	});

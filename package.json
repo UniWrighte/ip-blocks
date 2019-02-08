@@ -1,6 +1,6 @@
 {
   "name": "ip-blocks",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Create an IP address by index and subnet",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,10 @@
   ],
   "author": "David Kamer",
   "license": "MIT",
+  "repository": {
+	  "type": "git",
+	  "url": "https://github.com/UniWrighte/ip-blocks.git"
+  },
   "devDependencies": {
     "jest": "^24.1.0"
   }

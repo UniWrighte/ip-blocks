@@ -16,13 +16,12 @@ const getIP = function(index = 257, blocks = [0,0,3,256], arr = []){
 	const multiple = positions[result + 1];
 	let topIndex = 0;
 	let copyIndex = index;
-	while(copyIndex > multiple){
+	while(copyIndex >= multiple){
 		copyIndex -= multiple;
 		topIndex++;
 	}
 	//TODO - copy index needs to be treated nearly the same as index, with blocks changed to make current block 0.
 
-	console.log({result, topIndex, copyIndex});
 	arr.push(topIndex);
 	return getIP(copyIndex, blocks, arr);
 
