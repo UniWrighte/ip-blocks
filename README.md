@@ -17,7 +17,7 @@ use ip-blocks:
 
 	const highIndexIP = ipblocks("192.168.0.1", 23, 600);
 	console.log({highIndexIP});
-	//{highIndexIP: [ 192, 168, 2, 89 ]}
+	//throws error, out of subnet
 
 
 NOTE: future versions may return a string by default. Version information will remain in README to assist in compatibility when/if breaking changes occur. 
